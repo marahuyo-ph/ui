@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "@marahuyo/ui",
+  "homepage": "https://github.com/marahuyo-ph/ui",
+  "items": [
+    {
+      "name": "core-button",
+      "type": "registry:component",
+      "title": "Core Button",
+      "files": [{
+        "path": "registry/core/button.tsx",
+        "type": "registry:component"
+      }]
+    }
+  ]
+}

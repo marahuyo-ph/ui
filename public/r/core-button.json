@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "core-button",
+  "type": "registry:component",
+  "title": "Core Button",
+  "files": [
+    {
+      "path": "registry/core/button.tsx",
+      "content": "\nconst Button = () => {\n  return (\n    <div>Button</div>\n  )\n}\n\nexport default Button",
+      "type": "registry:component"
+    }
+  ]
+}
