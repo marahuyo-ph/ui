@@ -20,7 +20,7 @@ const meta = preview.meta({
   },
 });
 
-export const Example1 = meta.story({
+export const AccordionExample1 = meta.story({
   render: () => {
     return (
       <div class="min-w-xl">

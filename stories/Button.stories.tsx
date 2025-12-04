@@ -1,6 +1,5 @@
 import preview from '#.storybook/preview';
-import { fn } from 'storybook/test';
-import { Button } from './Button';
+import { Button } from '#registry/headless/button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = preview.meta({
@@ -14,37 +13,29 @@ const meta = preview.meta({
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
+    variant:{control:"select",options:["link","default","destructive","outline","secondary","ghost"],defaultValue:"ghost"},
+    size:{control:"select",options:["default","sm","lg","icon","icon-sm","icon-lg"]}
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args
-  args: { onClick: fn() },
 });
 
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = meta.story({
-  args: {
-    primary: true,
-    label: "Button",
-  },
+  args:{
+    variant:"default",
+    size:"default",
+    children:"hello"
+  }
 });
 
 export const Secondary = meta.story({
-  args: {
-    label: "Button",
-  },
+  
 });
 
 export const Large = meta.story({
-  args: {
-    size: "large",
-    label: "Button",
-  },
+  
 });
 
 export const Small = meta.story({
-  args: {
-    size: "small",
-    label: "Button",
-  },
+ 
 });
