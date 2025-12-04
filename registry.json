@@ -4,11 +4,11 @@
   "homepage": "https://github.com/marahuyo-ph/ui",
   "items": [
     {
-      "name": "core-button",
+      "name": "headless-arrow",
       "type": "registry:component",
-      "title": "Core Button",
+      "title": "Headless Arrow",
       "files": [{
-        "path": "registry/core/button.tsx",
+        "path": "registry/headless/arrow.tsx",
         "type": "registry:component"
       }]
     }

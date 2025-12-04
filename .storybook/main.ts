@@ -1,4 +1,6 @@
 import { defineMain } from 'storybook-solidjs-vite';
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineMain({
     framework: {
@@ -20,5 +22,19 @@ export default defineMain({
     stories: [
         '../stories/**/*.mdx',
         '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    ]
+    ],
+    viteFinal: async (config) => {
+        return {
+            ...config,
+            plugins:[...config.plugins || [],tailwindcss()],
+            resolve:{
+                ...config.resolve,
+                alias:{
+                    ...config.resolve?.alias,
+                    "@kobalte/core":"@kobalte/core",
+                    "@":path.resolve(import.meta.dirname,"../registry")
+                }
+            }
+        }
+    }
 });
