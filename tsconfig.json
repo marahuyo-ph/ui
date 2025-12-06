@@ -29,5 +29,5 @@
       "@/*":["./registry/*"]
     }
   },
-  "include": ["registry","stories"]
+  "include": ["registry","stories","tests"]
 }
